@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { TaskBaseModule } from './task-base/task-base.module';
+import { ListBaseModule } from './list-base/list-base.module';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,TaskBaseModule],
+  imports: [CommonModule, RouterOutlet,TaskBaseModule,ListBaseModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
