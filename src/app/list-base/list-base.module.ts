@@ -4,12 +4,15 @@ import { ListBaseComponent } from './list-base.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { TaskDetailComponent } from './task-detail/task-detail.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { TaskListService } from './services/task-list.service';
 
 @NgModule({
   imports: [
-    CommonModule,FormsModule
+    CommonModule,FormsModule, HttpClientModule
   ],
   declarations: [TaskListComponent,TaskDetailComponent],
-  exports: [TaskListComponent]
+  exports: [TaskListComponent],
+  providers: [TaskListService]
 })
 export class ListBaseModule { }
