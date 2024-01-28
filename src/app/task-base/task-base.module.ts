@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListBaseComponent } from './list-base.component';
+import { TaskBaseComponent } from './task-base.component';
+
 import { TaskListComponent } from './task-list/task-list.component';
 import { TaskDetailComponent } from './task-detail/task-detail.component';
 import { FormsModule } from '@angular/forms';
@@ -15,4 +16,4 @@ import { TaskListService } from './services/task-list.service';
   exports: [TaskListComponent],
   providers: [TaskListService]
 })
-export class ListBaseModule { }
+export class TaskBaseModule { }
