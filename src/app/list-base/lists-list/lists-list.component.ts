@@ -9,11 +9,16 @@ import { ListService } from '../services/list.service';
 })
 export class ListsListComponent implements OnInit {
 
+
   lists!: List[];
 
   constructor(private listService: ListService) {
     
   }
+  
+  // onRemove(){
+  //   this.remove.emit(this.lists);
+  // }
 
   ngOnInit() {
     this.listService.getLists().subscribe((data: any) => {
@@ -21,5 +26,7 @@ export class ListsListComponent implements OnInit {
       this.lists = data.lists;
     })
   }
+
+  
 
 }
