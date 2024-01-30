@@ -1,4 +1,4 @@
-<ul>
+<ul [class.task-list]="true">
   <li *ngFor="let task of tasks">
     <app-task-detail [task]="task"></app-task-detail>
   </li>

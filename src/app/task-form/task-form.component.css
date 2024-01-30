@@ -1,0 +1,15 @@
+.task-form{
+    position: fixed;
+    height: 90%;
+    right: 20px;
+    top: 20px;
+    padding: 15px;
+    width: 300px;
+    background-color: rgb(245,245,245);
+    border-radius: 10px;
+}
+
+input{
+    display: block;
+    margin-bottom: 7px;
+}
