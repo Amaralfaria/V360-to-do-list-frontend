@@ -28,6 +28,19 @@ constructor(private http: HttpClient) {
     return this.http.post(`${LISTS_API}/item/`,body,{headers:this.headers})
   }
 
+  editTask(task: ListItem){
+    let body = {
+      "item_name": task.item_name,
+      "description":task.description,
+      "due_date":task.due_date,
+  }
+    return this.http.put(`${LISTS_API}/item/${task.id}`,body,{headers:this.headers})
+  }
+
+  deleteTask(task_id: number){
+    return this.http.delete(`${LISTS_API}/item/${task_id}`,{headers:this.headers})
+  }
+
 
 
 }

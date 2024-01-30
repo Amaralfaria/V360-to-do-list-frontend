@@ -41,6 +41,23 @@ export class TaskFormComponent implements OnInit {
       }, error =>{
         console.log('erro')
       })
+    }else if(event === "save_btn"){
+      this.taskService.editTask(this.task).subscribe(response => {
+        console.log('salvou');
+      }, error =>{
+        console.log('erro')
+      })
+    }else if(event === "delete_btn"){
+      if(this.task.id == undefined){
+        return 
+      }
+
+      this.taskService.deleteTask(this.task.id).subscribe(response => {
+        console.log('deletou');
+      }, error =>{
+        console.log('erro')
+      })
+
     }
   }
 
