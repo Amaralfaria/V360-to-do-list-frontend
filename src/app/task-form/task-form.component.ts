@@ -11,6 +11,7 @@ export class TaskFormComponent implements OnInit {
 
   @Input()
   task!: ListItem;
+  
 
   constructor(private communicator: TaskFormCommunicatorService) {
   }

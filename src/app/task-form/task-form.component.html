@@ -1,21 +1,24 @@
-<form #task_form="ngForm" *ngIf="task != null;">
-  <input type="text" name="name" [(ngModel)]="task.item_name">
-  <input type="text" name="description" [(ngModel)]="task.description">
-  <input type="date" name="due_date" [(ngModel)]="task.due_date">
-
-  <div #modify_btns>
-    <button type="submit" [disabled]="!allInputsFilled()">Save</button>
-    <button type="submit" [disabled]="!allInputsFilled()">Delete task</button>
-  </div>
-</form>
-
-<form #task_form="ngForm" *ngIf="task == null">
-  <input type="text" name="name">
-  <input type="text" name="description">
-  <input type="date" name="due_date">
-
-  <button type="submit" [disabled]="!allInputsFilled()">Create</button>
-
-</form>
+<div [class.task-form]="true">
+  <h1>Task:</h1>
+  <form #task_form="ngForm" *ngIf="task != null;">
+    <input type="text" name="name" [(ngModel)]="task.item_name" placeholder="Task name">
+    <input type="text" name="description" [(ngModel)]="task.description" placeholder="Description">
+    <input type="date" name="due_date" [(ngModel)]="task.due_date" placeholder="Due date">
+  
+    <div #modify_btns>
+      <button type="submit" [disabled]="!allInputsFilled()">Save</button>
+      <button type="submit" [disabled]="!allInputsFilled()">Delete task</button>
+    </div>
+  </form>
+  
+  <form #task_form="ngForm" *ngIf="task == null">
+    <input type="text" name="name" placeholder="Task name">
+    <input type="text" name="description" placeholder="Description">
+    <input type="date" name="due_date" placeholder="Due date">
+  
+    <button type="submit" [disabled]="!allInputsFilled()">Create</button>
+  
+  </form>
+</div>
 
 
