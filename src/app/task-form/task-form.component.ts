@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ListItem } from '../models/list';
+import { TaskFormCommunicatorService } from '../task-base/services/taskFormCommunicator.service';
 
 @Component({
   selector: 'app-task-form',
@@ -11,10 +12,14 @@ export class TaskFormComponent implements OnInit {
   @Input()
   task!: ListItem;
 
-  constructor() {
+  constructor(private communicator: TaskFormCommunicatorService) {
   }
 
   ngOnInit() {
+    this.communicator.selectTask.subscribe((data: ListItem) => {
+      console.log('puxou');
+      this.task = data;
+    })
   }
 
   allInputsFilled(): boolean{

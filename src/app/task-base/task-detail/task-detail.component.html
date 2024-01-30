@@ -1,5 +1,8 @@
 <div>
   <input type="checkbox" (click)="handleCheck()" [(ngModel)]="task.done">
-  <p>{{ task.item_name }}</p>
-  <span>{{ task.due_date }}</span>
+
+  <div (click)="handleSelectTask(task)">
+    <p>{{ task.item_name }}</p>
+    <span>{{ task.due_date }}</span>
+  </div>
 </div>
