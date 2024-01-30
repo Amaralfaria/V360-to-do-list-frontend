@@ -20,7 +20,7 @@ export class ListsDetailComponent implements OnInit {
 
   onSelectList(){
     console.log('List selected')
-    this.comunicador.changeList.emit(this.list.id)
+    this.comunicador.changeList.emit(this.list)
   }
 
 }

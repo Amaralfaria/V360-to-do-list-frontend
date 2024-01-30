@@ -20,7 +20,7 @@ export class TaskListService {
 
 
 
-  getTasks(list_id: number): any{
+  getTasks(list_id: any): any{
     return this.http.get(`${LISTS_API}/items/${list_id}`,{headers:this.headers})
   }
 
