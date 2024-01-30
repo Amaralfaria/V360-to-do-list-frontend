@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { List, ListItem } from '../models/list';
 import { TaskFormCommunicatorService } from '../task-base/services/taskFormCommunicator.service';
+import { TaskService } from './services/task.service';
+import { error } from 'console';
 
 @Component({
   selector: 'app-task-form',
@@ -15,7 +17,7 @@ export class TaskFormComponent implements OnInit {
 
   
 
-  constructor(private communicator: TaskFormCommunicatorService) {
+  constructor(private communicator: TaskFormCommunicatorService, private taskService: TaskService) {
     this.task = {};
   }
 
@@ -30,6 +32,16 @@ export class TaskFormComponent implements OnInit {
       this.task = {}
       this.task.list = data.id;
     })
+  }
+
+  onSubmit(event: string){
+    if(event === "create_btn"){
+      this.taskService.createTask(this.task).subscribe(response => {
+        console.log('criou');
+      }, error =>{
+        console.log('erro')
+      })
+    }
   }
 
   allInputsFilled(): boolean{
