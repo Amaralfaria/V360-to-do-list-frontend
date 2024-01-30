@@ -1,4 +1,6 @@
 .task-list{
+    list-style: none;
     margin-left: 400px;
     margin-top: 40px;
 }
+
