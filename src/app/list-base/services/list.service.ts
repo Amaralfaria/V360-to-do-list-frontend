@@ -21,5 +21,11 @@ export class ListService {
   getLists(): any{
     return this.http.get(`${LISTS_API}/user_lists/`,{headers:this.headers})
   }
+
+  createList(listName: string): any{
+    console.log(listName)
+    return this.http.post(`${LISTS_API}/create/`,{"list_name":listName},{headers:this.headers})
+  }
+
 }
 

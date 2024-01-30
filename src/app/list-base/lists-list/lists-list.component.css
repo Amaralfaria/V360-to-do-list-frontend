@@ -1,9 +1,9 @@
-.lists-list{
+.lists-list ul{
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.lists-list li{
+.lists-list ul li{
     margin-bottom: 5px;
 }
