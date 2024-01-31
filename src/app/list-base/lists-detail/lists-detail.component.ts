@@ -3,6 +3,7 @@ import { List } from '../../models/list';
 import { TaskCommunicationService } from '../services/taskCommunication.service';
 
 
+
 @Component({
   selector: 'app-lists-detail',
   templateUrl: './lists-detail.component.html',

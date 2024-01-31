@@ -9,6 +9,10 @@
     border-radius: 10px;
 }
 
+hr{
+    margin-top: 30px;
+}
+
 .menu h1{
     margin-bottom: 50px;
     font-size: x-large;
