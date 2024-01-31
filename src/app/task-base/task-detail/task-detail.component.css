@@ -1,0 +1,18 @@
+.item{
+    display: flex;
+    align-items: baseline;
+}
+
+.item div{
+    width: 100%;
+}
+
+hr{
+    background-color: rgb(223, 223, 223);
+    height: 1px;
+    border: 0;
+}
+
+input[type="checkbox"]{
+    margin-right: 30px;
+}
