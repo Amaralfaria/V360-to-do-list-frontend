@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpHeaders } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
+import { List } from '../../models/list';
 
 const LISTS_API = 'http://localhost:8000/list';
 
@@ -23,8 +24,11 @@ export class ListService {
   }
 
   createList(listName: string): any{
-    console.log(listName)
     return this.http.post(`${LISTS_API}/create/`,{"list_name":listName},{headers:this.headers})
+  }
+
+  deleteList(list: List): any{
+    return this.http.delete(`${LISTS_API}/get_list/${list.id}`,{headers:this.headers})
   }
 
 }

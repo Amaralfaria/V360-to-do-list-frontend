@@ -39,6 +39,14 @@ export class ListsListComponent implements OnInit {
 
   }
 
+  handleDelete(list: List){
+    this.listService.deleteList(list).subscribe((data:any) => {
+      this.listService.getLists().subscribe((data: any) => {
+        this.lists = data.lists;
+      })
+    })
+  }
+
   
 
 }
