@@ -7,11 +7,13 @@ import { MenuModule } from './menu/menu.module';
 import { TaskFormModule } from './task-form/task-form.module';
 import { FormsModule } from '@angular/forms';
 import { LoginUserModule } from './login-user/login-user.module';
+import { SignUpModule } from './sign-up/sign-up.module';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, FormsModule,RouterOutlet,TaskBaseModule,ListBaseModule,MenuModule,TaskFormModule, LoginUserModule],
+  imports: [CommonModule, FormsModule,RouterOutlet,TaskBaseModule,ListBaseModule,MenuModule,TaskFormModule, LoginUserModule, SignUpModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
