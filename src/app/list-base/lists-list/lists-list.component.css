@@ -4,6 +4,8 @@
     list-style: none;
 }
 
-.lists-list ul li{
+.lists-list ul{
     margin-bottom: 5px;
+    margin: 0;
+    padding: 0;
 }
