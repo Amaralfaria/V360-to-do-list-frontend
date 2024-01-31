@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { LoginUserModule } from './login-user/login-user.module';
 import { SignUpModule } from './sign-up/sign-up.module';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
