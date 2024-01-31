@@ -1,0 +1,11 @@
+<form #sign_up_form="ngForm" (ngSubmit)="signUp(sign_up_form)">
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" ngModel>
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" ngModel>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" ngModel>
+
+    <button type="submit">Sign up</button>
+</form>

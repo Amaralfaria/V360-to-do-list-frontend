@@ -22,6 +22,8 @@ export class LoginFormComponent implements OnInit {
       "password": form.value.password
     }
 
+    form.reset()
+
     this.loginService.login(user).subscribe((data: any) => {
       console.log('login')
       localStorage.setItem("tkn", data.access);
