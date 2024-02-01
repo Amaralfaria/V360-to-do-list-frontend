@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
+import { MenuService } from './services/menu.service';
 
 @Component({
   selector: 'app-menu',
@@ -11,15 +12,17 @@ export class MenuComponent implements OnInit {
 
   icon = faArrowRightFromBracket;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private menuService: MenuService) { }
 
   ngOnInit() {
   }
 
   handleSignOut(){
-    localStorage.removeItem('tkn');
-    localStorage.removeItem('refresh_tkn');
-    this.router.navigate(['/']);
+    this.menuService.logoutUser().subscribe((data: any) => {
+      localStorage.removeItem('tkn');
+      localStorage.removeItem('refresh_tkn');
+      this.router.navigate(['/']);
+    })
   }
 
 }
