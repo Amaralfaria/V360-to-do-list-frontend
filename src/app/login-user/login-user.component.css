@@ -1,0 +1,21 @@
+.login_pg{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login_pg img{
+    width: 50%;
+    height: 80vh;
+}
+
+p,hr{
+    display: inline-block;
+    width: 80%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
