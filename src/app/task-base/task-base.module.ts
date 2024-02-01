@@ -8,10 +8,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TaskListService } from './services/task-list.service';
 import { TaskService } from './services/task.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   imports: [
-    CommonModule,FormsModule, HttpClientModule
+    CommonModule,FormsModule, HttpClientModule, FontAwesomeModule
   ],
   declarations: [TaskListComponent,TaskDetailComponent],
   exports: [TaskListComponent],

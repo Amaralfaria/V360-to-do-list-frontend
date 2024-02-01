@@ -4,6 +4,7 @@ import { TaskListService } from '../services/task-list.service';
 import { TaskCommunicationService } from '../../list-base/services/taskCommunication.service';
 import { TaskFormCommunicatorService } from '../services/taskFormCommunicator.service';
 import { TaskService } from '../../task-form/services/task.service';
+import { faAdd } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-task-list',
@@ -15,6 +16,7 @@ export class TaskListComponent implements OnInit {
 
   tasks!: ListItem[];
   list!: List;
+  icon = faAdd;
 
   constructor(private listService: TaskListService, private communicator: TaskCommunicationService, private formCommunicator: TaskFormCommunicatorService, private taskService: TaskService) {  }
 

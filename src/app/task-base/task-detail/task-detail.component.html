@@ -2,7 +2,7 @@
   <input #done_box type="checkbox" (click)="handleCheck(done_box)" [(ngModel)]="task.done">
 
   <div (click)="handleSelectTask(task)" id="task_name" [class.checked]="done_box.checked">
-    <p [class.item_name]="true">{{ task.item_name }}</p>
+    <p [class.item_name]="true">{{ task.item_name }} <fa-icon [icon]="icon"></fa-icon></p>
   </div>
 </div>
 <hr>

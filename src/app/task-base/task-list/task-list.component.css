@@ -10,11 +10,16 @@ button{
     height: 50px;
     text-align: left;
     border: 1px solid rgb(223, 223, 223);
+    cursor: pointer;
 }
 
 .wrapper{
     margin-left: 400px;
     margin-top: 40px;
     width: 43%;
+}
+
+fa-icon{
+    margin: 0 10px;
 }
 

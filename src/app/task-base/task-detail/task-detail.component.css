@@ -1,10 +1,17 @@
 .item{
     display: flex;
+    position: relative;
     align-items: baseline;
+    cursor: pointer;
 }
 
 .item div{
     width: 100%;
+}
+
+.item_name fa-icon{
+    position: absolute;
+    right: 10px;
 }
 
 input[type="checkbox"]{

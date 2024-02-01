@@ -3,6 +3,7 @@ import { ListItem } from '../../models/list';
 import { TaskFormCommunicatorService } from '../services/taskFormCommunicator.service';
 import { TaskService } from '../services/task.service';
 import { error } from 'console';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-task-detail',
@@ -13,6 +14,7 @@ export class TaskDetailComponent implements OnInit {
 
   @Input()
   task!: ListItem;
+  icon = faAngleRight;
 
   constructor(private communicator: TaskFormCommunicatorService, private taskService: TaskService) {}
 
