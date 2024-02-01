@@ -7,6 +7,7 @@ import { TaskDetailComponent } from './task-detail/task-detail.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TaskListService } from './services/task-list.service';
+import { TaskService } from './services/task.service';
 
 @NgModule({
   imports: [
@@ -14,6 +15,6 @@ import { TaskListService } from './services/task-list.service';
   ],
   declarations: [TaskListComponent,TaskDetailComponent],
   exports: [TaskListComponent],
-  providers: [TaskListService]
+  providers: [TaskListService, TaskService]
 })
 export class TaskBaseModule { }
