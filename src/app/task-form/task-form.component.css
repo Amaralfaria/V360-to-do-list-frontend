@@ -7,6 +7,7 @@
     width: 25%;
     background-color: rgb(245,245,245);
     border-radius: 10px;
+    transition: right 0.3s ease;
 }
 
 h1{
@@ -40,6 +41,24 @@ input[type="date"]{
     padding: 15px;
     box-sizing: border-box;
     display: inline-block;
+}
+
+#form_closer{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgb(245,245,245);
+}
+
+#form_closer:hover{
+    background-color: #efeded;
+}
+
+.form_closed{
+    right: -26%;
+    transition: right 0.3s ease;
 }
 
 input, textarea{
@@ -80,9 +99,4 @@ button:disabled{
 form{
     height: 100%;
     position: relative;
-}
-
-.btns{
-    display: flex;
-    justify-content: end;
 }

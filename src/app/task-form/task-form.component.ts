@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { List, ListItem } from '../models/list';
 import { TaskFormCommunicatorService } from '../task-base/services/taskFormCommunicator.service';
 import { TaskService } from './services/task.service';
@@ -15,6 +15,8 @@ export class TaskFormComponent implements OnInit {
   @Input()
   task!: ListItem;
 
+  @ViewChild('task_form') form: any; 
+
 
   
 
@@ -26,13 +28,19 @@ export class TaskFormComponent implements OnInit {
     this.communicator.selectTask.subscribe((data: ListItem) => {
       console.log('puxou');
       this.task = data;
+      this.form.nativeElement.classList.remove('form_closed')
     })
 
     this.communicator.newTask.subscribe((data: List) => {
       console.log('novo');
       this.task = {}
       this.task.list = data.id;
+      this.form.nativeElement.classList.remove('form_closed')
     })
+  }
+
+  closeForm(){
+    this.form.nativeElement.classList.add('form_closed')
   }
 
   onSubmit(event: string){

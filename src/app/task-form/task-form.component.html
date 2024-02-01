@@ -1,4 +1,5 @@
-<div [class.task-form]="true">
+<div [class.task-form]="true" #task_form class="form_closed">
+  <button id="form_closer" (click)="closeForm()">X</button>
   <h1>Task:</h1>
   <form #task_form="ngForm" (ngSubmit)="onSubmit($event.submitter.id)">
     <input type="text" name="name" [(ngModel)]="task.item_name" placeholder="Task name">
@@ -7,12 +8,14 @@
     <label for="due_date">Due date</label>
     <input type="date" name="due_date" [(ngModel)]="task.due_date" id="due_date" placeholder="Due date">
   
-    <div #modify_btns *ngIf="task?.id" class="btns">
-      <button type="submit" [disabled]="!allInputsFilled()" id="delete_btn">Delete task</button>
-      <button type="submit" [disabled]="!allInputsFilled()" id="save_btn">Save</button>
-    </div>
-    <div #create_btns *ngIf="!task?.id" class="btns">
-      <button type="submit" [disabled]="!allInputsFilled()" id="create_btn">Create task</button>
+    <div class="btns">
+      <div #modify_btns *ngIf="task?.id" class="btns">
+        <button type="submit" [disabled]="!allInputsFilled()" id="delete_btn">Delete task</button>
+        <button type="submit" [disabled]="!allInputsFilled()" id="save_btn">Save</button>
+      </div>
+      <div #create_btns *ngIf="!task?.id" class="btns">
+        <button type="submit" [disabled]="!allInputsFilled()" id="create_btn">Create task</button>
+      </div>
     </div>
   </form> 
 </div>
