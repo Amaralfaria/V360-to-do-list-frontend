@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuComponent } from './menu.component';
 import { ListBaseModule } from '../list-base/list-base.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   imports: [
-    CommonModule, ListBaseModule
+    CommonModule, ListBaseModule, FontAwesomeModule
   ],
   exports:[MenuComponent],
   declarations: [MenuComponent]

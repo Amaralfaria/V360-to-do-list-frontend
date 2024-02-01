@@ -24,6 +24,27 @@ h2{
     text-transform: uppercase;
 }
 
+#sign_out_btn{
+    position: absolute;
+    background-color: rgb(245,245,245);
+    border: none;
+    font-weight: 600;
+    height: 30px;
+    width: 30%;
+    bottom: 15px;
+    left: 15px;
+    border-radius: 10px;
+}
+
+#sign_out_btn:hover{
+    background-color: #EBEBEB;
+    color: #424242;
+}
+
+fa-icon{
+    margin-right: 5px;
+}
+
 
 
 
