@@ -9,6 +9,10 @@
     height: 80vh;
 }
 
+#sign_in_form{
+    width: 30%;
+}
+
 p,hr{
     display: inline-block;
     width: 80%;
