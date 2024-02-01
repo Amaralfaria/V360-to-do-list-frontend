@@ -38,12 +38,14 @@ export class TaskFormComponent implements OnInit {
     if(event === "create_btn"){
       this.taskService.createTask(this.task).subscribe(response => {
         console.log('criou');
+        this.taskService.updateTaskList.emit();
       }, error =>{
         console.log('erro')
       })
     }else if(event === "save_btn"){
       this.taskService.editTask(this.task).subscribe(response => {
         console.log('salvou');
+        this.taskService.updateTaskList.emit();
       }, error =>{
         console.log('erro')
       })
@@ -54,6 +56,7 @@ export class TaskFormComponent implements OnInit {
 
       this.taskService.deleteTask(this.task.id).subscribe(response => {
         console.log('deletou');
+        this.taskService.updateTaskList.emit();
       }, error =>{
         console.log('erro')
       })
