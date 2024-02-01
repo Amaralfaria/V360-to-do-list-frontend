@@ -7,7 +7,8 @@ import { error } from 'console';
 @Component({
   selector: 'app-task-form',
   templateUrl: './task-form.component.html',
-  styleUrls: ['./task-form.component.css']
+  styleUrls: ['./task-form.component.css'],
+  host: {ngSkipHydration: 'true'},
 })
 export class TaskFormComponent implements OnInit {
 

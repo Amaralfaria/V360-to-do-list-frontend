@@ -10,6 +10,7 @@ import { TaskService } from '../../task-form/services/task.service';
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.css']
 })
+
 export class TaskListComponent implements OnInit {
 
   tasks!: ListItem[];
@@ -18,12 +19,6 @@ export class TaskListComponent implements OnInit {
   constructor(private listService: TaskListService, private communicator: TaskCommunicationService, private formCommunicator: TaskFormCommunicatorService, private taskService: TaskService) {  }
 
   ngOnInit() {
-    this.listService.getTasks(5).subscribe((data: any) =>{
-      this.tasks = data.list_items
-      this.list = {}
-      this.list.id = 5
-    })
-
     this.communicator.changeList.subscribe((data: List) => {
       this.list = data;
       this.listService.getTasks(data.id).subscribe((data: any) =>{
