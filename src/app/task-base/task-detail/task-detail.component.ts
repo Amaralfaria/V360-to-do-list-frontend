@@ -19,12 +19,20 @@ export class TaskDetailComponent implements OnInit {
   ngOnInit() {
   }
 
-  handleCheck(task: ListItem): void{
-    this.taskService.finishTask(task).subscribe((data: any) => {
-      console.log('Finalizada');
-    }, (error: any) =>{
-      console.log('erro')
-    })
+  handleCheck(checker: any): void{
+    if(checker.checked){
+      this.taskService.finishTask(this.task).subscribe((data: any) => {
+        console.log('Finalizada');
+      }, (error: any) =>{
+        console.log('erro')
+      })
+    }else{
+      this.taskService.unfinishTask(this.task).subscribe((data: any) => {
+        console.log('Desfinalizada');
+      }, (error: any) =>{
+        console.log('erro')
+      })
+    }
   }
 
   handleSelectTask(task: ListItem){

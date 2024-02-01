@@ -23,6 +23,10 @@ export class TaskService {
     return this.http.post(`${TASK_API}finish/${task.id}`,null,{headers:this.headers})
   }
 
+  unfinishTask(task: ListItem): any{
+    return this.http.post(`${TASK_API}unfinish/${task.id}`,null,{headers:this.headers})
+  }
+
 
 
 }
