@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ListItem } from '../../models/list';
 import { getAccessJWTToken } from '../../utils/authorization';
+import { EventEmitter } from '@angular/core';
 
 const LISTS_API = 'http://localhost:8000/list';
 
@@ -17,6 +18,8 @@ constructor(private http: HttpClient) {
     'Authorization': `Bearer ${getAccessJWTToken()}`
   });
 }
+
+  updateTaskList: EventEmitter<any> = new EventEmitter();
 
   createTask(task: ListItem){
     let body = {

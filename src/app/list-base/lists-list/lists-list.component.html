@@ -6,7 +6,7 @@
   </ul>
   <form #list_form="ngForm" (ngSubmit)="handleCreate(list_form)">
     <input type="text" placeholder="Add new list" name="list_name" id="list_name" [(ngModel)]="list_name">
-    <button type="submit">Create</button>
+    <button type="submit"><fa-icon [icon]="icon"></fa-icon></button>
   </form>
 </div>
 
