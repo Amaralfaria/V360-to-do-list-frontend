@@ -4,6 +4,41 @@
     list-style: none;
 }
 
-.lists-list ul li{
+.lists-list ul{
     margin-bottom: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+button, input{
+    border-radius: 5px;
+    background-color: rgb(243,243,243);
+}
+
+input{
+    border: 1px solid rgb(223, 223, 223);
+    padding: 3px;
+    width: 70%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+button{
+    background-color: #efeded;
+    text-align: center;
+    margin-left: 10px;
+    color: black;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #FFD33C;
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
 }

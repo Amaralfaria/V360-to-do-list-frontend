@@ -17,11 +17,11 @@ export class TaskListComponent implements OnInit {
   constructor(private listService: TaskListService, private communicator: TaskCommunicationService, private formCommunicator: TaskFormCommunicatorService) {  }
 
   ngOnInit() {
-    // this.listService.getTasks(2).subscribe((data: any) =>{
-    //   this.tasks = data.list_items
-    //   this.list = {}
-    //   this.list.id = 2
-    // })
+    this.listService.getTasks(5).subscribe((data: any) =>{
+      this.tasks = data.list_items
+      this.list = {}
+      this.list.id = 5
+    })
 
     this.communicator.changeList.subscribe((data: List) => {
       this.list = data;

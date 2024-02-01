@@ -4,13 +4,24 @@
     left: 20px;
     top: 20px;
     padding: 15px;
-    width: 300px;
+    width: 20%;
     background-color: rgb(245,245,245);
     border-radius: 10px;
 }
 
+hr{
+    margin-top: 30px;
+}
+
 .menu h1{
     margin-bottom: 50px;
+    font-size: x-large;
+}
+
+h2{
+    font-size: x-small;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 
