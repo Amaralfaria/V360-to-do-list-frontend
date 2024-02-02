@@ -1,6 +1,6 @@
 .task-form{
     position: fixed;
-    height: 90%;
+    height: 90vh;
     right: 20px;
     top: 20px;
     padding: 15px;
@@ -49,11 +49,11 @@ input[type="date"]{
     right: 10px;
     width: 40px;
     border-radius: 50%;
-    background-color: rgb(245,245,245);
+    background-color: transparent;
 }
 
 #form_closer:hover{
-    background-color: #efeded;
+    background-color: rgba(169, 209, 255, 0.913);
 }
 
 .form_closed{
@@ -99,4 +99,10 @@ button:disabled{
 form{
     height: 100%;
     position: relative;
+}
+
+.btns{
+    display: flex;
+    justify-content: end;
+    margin-top: 10%;
 }

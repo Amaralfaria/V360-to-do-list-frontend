@@ -16,6 +16,7 @@ hr{
 .menu h1{
     margin-bottom: 50px;
     font-size: x-large;
+    cursor: pointer;
 }
 
 h2{

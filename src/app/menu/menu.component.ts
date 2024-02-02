@@ -25,4 +25,8 @@ export class MenuComponent implements OnInit {
     })
   }
 
+  handleMenu(){
+    this.menuService.goToMenu.emit();
+  }
+
 }
