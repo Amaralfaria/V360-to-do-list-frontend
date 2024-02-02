@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: sans-serif;
+}
+
+hr{
+    background-color: rgb(223, 223, 223);
+    height: 1px;
+    border: 0;
+}
+
+button{
+    transition: background-color 0.3s ease;
+}

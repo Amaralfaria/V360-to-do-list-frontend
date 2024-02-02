@@ -1,0 +1,35 @@
+div{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.select{
+    width: 90%;
+    height: 30px;
+    padding: 0;
+    border: none;
+    text-align: left;
+    background-color: rgb(245, 245, 245);
+}
+
+.delete{
+    height: 30px;
+    width: 10%;
+    padding: 0;
+    border: none;
+    text-align: center;
+    background-color: rgb(245, 245, 245);
+    cursor: pointer;
+}
+
+button{
+    border-radius: 10px;
+}
+
+
+
+button:hover{
+    background-color: #EBEBEB;
+    color: #424242;
+}

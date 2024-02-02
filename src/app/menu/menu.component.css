@@ -1,0 +1,52 @@
+.menu{
+    position: fixed;
+    height: 90%;
+    left: 20px;
+    top: 20px;
+    padding: 15px;
+    width: 20%;
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+}
+
+hr{
+    margin-top: 30px;
+}
+
+.menu h1{
+    margin-bottom: 50px;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+h2{
+    font-size: x-small;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#sign_out_btn{
+    position: absolute;
+    background-color: rgb(245,245,245);
+    border: none;
+    font-weight: 600;
+    height: 30px;
+    width: 30%;
+    bottom: 15px;
+    left: 15px;
+    border-radius: 10px;
+}
+
+#sign_out_btn:hover{
+    background-color: #EBEBEB;
+    color: #424242;
+}
+
+fa-icon{
+    margin-right: 5px;
+}
+
+
+
+
+

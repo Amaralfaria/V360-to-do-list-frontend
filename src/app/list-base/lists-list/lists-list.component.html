@@ -1,0 +1,12 @@
+<div [class.lists-list]="true">
+  <ul>
+    <li *ngFor="let list of lists">
+      <app-lists-detail [list]="list" (delete)="handleDelete($event)"></app-lists-detail>
+    </li>
+  </ul>
+  <form #list_form="ngForm" (ngSubmit)="handleCreate(list_form)">
+    <input type="text" placeholder="Add new list" name="list_name" id="list_name" [(ngModel)]="list_name">
+    <button type="submit"><fa-icon [icon]="icon"></fa-icon></button>
+  </form>
+</div>
+

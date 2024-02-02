@@ -1,0 +1,25 @@
+.task-list ul{
+    list-style: none;
+    padding: 0;
+}
+
+button{
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    height: 50px;
+    text-align: left;
+    border: 1px solid rgb(223, 223, 223);
+    cursor: pointer;
+}
+
+.wrapper{
+    margin-left: 27%;
+    margin-top: 40px;
+    width: 43%;
+}
+
+fa-icon{
+    margin: 0 10px;
+}
+

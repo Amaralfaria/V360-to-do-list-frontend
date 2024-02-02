@@ -1,0 +1,24 @@
+.sign_up_pg{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sign_up_pg img{
+    width: 50%;
+    height: 80vh;
+}
+
+#sign_up_form{
+    width: 30%;
+}
+
+p,hr{
+    display: inline-block;
+    width: 80%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
