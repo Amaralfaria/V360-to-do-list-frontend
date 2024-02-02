@@ -5,7 +5,7 @@
     top: 20px;
     padding: 15px;
     width: 25%;
-    background-color: rgb(245,245,245);
+    background-color: rgba(206, 229, 255, 0.913);
     border-radius: 10px;
     transition: right 0.3s ease;
 }

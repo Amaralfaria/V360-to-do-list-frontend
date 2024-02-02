@@ -23,21 +23,35 @@ export class TaskListComponent implements OnInit {
   ngOnInit() {
     this.communicator.changeList.subscribe((data: List) => {
       this.list = data;
-      this.listService.getTasks(data.id).subscribe((data: any) =>{
-        this.tasks = data.list_items
-      })
+      if(data.id)
+      this.getTasks(data.id)
     })
 
     this.taskService.updateTaskList.subscribe((data: any) => {
-      this.listService.getTasks(this.list.id).subscribe((data: any) =>{
-        this.tasks = data.list_items
-      })
+      if(this.list.id)
+      this.getTasks(this.list.id)
     })
+
+    if(this.list == null){
+      this.getTodayTasks();
+    }
 
   }
 
   handleNewTask(){
     this.formCommunicator.newTask.emit(this.list);
+  }
+
+  getTodayTasks(){
+    return this.listService.getTodayTasks().subscribe((data: any) =>{
+      this.tasks = data.list_items
+    })
+  }
+
+  getTasks(id: number){
+    this.listService.getTasks(id).subscribe((data: any) =>{
+      this.tasks = data.list_items
+    })
   }
 
 }
