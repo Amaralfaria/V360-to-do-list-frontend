@@ -25,4 +25,8 @@ export class TaskListService {
     return this.http.get(`${LISTS_API}/items/${list_id}`,{headers:this.headers})
   }
 
+  getTodayTasks(): any{
+    return this.http.get(`${LISTS_API}/items/today/`,{headers:this.headers})
+  }
+
 }

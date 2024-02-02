@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { getAccessJWTToken } from '../../utils/authorization';
 
 const LOGOUT_API = 'http://localhost:8000/user/logout/';
@@ -9,6 +9,8 @@ const LOGOUT_API = 'http://localhost:8000/user/logout/';
 })
 export class MenuService {
   headers!: HttpHeaders;
+
+  goToMenu: EventEmitter<any> = new EventEmitter();
 
 constructor(private http: HttpClient) {
   this.headers = new HttpHeaders({

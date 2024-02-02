@@ -1,13 +1,14 @@
 <div class="wrapper">
-  <div class="no-list-selected" *ngIf="list == null">
+  <!-- <div class="no-list-selected" *ngIf="list == null">
     <h1>Welcome back!</h1>
     <p>Let's get some work done!</p>
-  </div>
+  </div> -->
 
-  <div class="has-list-selected" *ngIf="list != null">
-    <h1>{{ list.list_name }}</h1>
+  <div [class.has-list-selected]="list != null">
+    <h1 *ngIf="list!=null">{{ list.list_name }}</h1>
+    <h1 *ngIf="list==null">For today</h1>
     <div [class.task-list]="true">
-      <button (click)="handleNewTask()" id="btn_new_task"><fa-icon [icon]="icon"></fa-icon> Add new task</button>
+      <button (click)="handleNewTask()" id="btn_new_task" *ngIf="list!=null"><fa-icon [icon]="icon" *ngIf="list!=null"></fa-icon> Add new task</button>
       <ul>
         <li *ngFor="let task of tasks">
           <app-task-detail [task]="task"></app-task-detail>
